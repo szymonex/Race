@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\MapContainer.cs" />
     <Compile Include="Assets\Scripts\CarEffects.cs" />
-    <Compile Include="Assets\Scripts\GreyScale.cs" />
     <Compile Include="Assets\Scripts\AITrack.cs" />
     <Compile Include="Assets\Maps\Map.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />
@@ -89,7 +88,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Car Engine Sounds - i6 German Free\Demo_Audio\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Scripts\Greyscale.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
