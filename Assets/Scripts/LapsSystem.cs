@@ -30,7 +30,7 @@ public class LapsSystem : MonoBehaviour
 
     internal void CheckPointCompleted(CheckPoint hittedCheckpoint)
     {
-        if(hittedCheckpoint == checkpoints[currentCheckpoint] && currentCheckpoint < checkpoints.Length - 1)
+        if(hittedCheckpoint == checkpoints[currentCheckpoint])// && currentCheckpoint < checkpoints.Length)
         {
             if(currentCheckpoint == 0)
             {
@@ -48,10 +48,23 @@ public class LapsSystem : MonoBehaviour
                     ShowLapTime();
                 }
             }
-            Debug.Log("CheckPoint!");
+            Debug.Log($"CheckPoint {currentCheckpoint}!");
+            //currentCheckpoint++;
+            checkPointRangeChecker();
+        }
+        //else if(currentCheckpoint == checkpoints.Length - 1)
+        //{
+        //    currentCheckpoint = 0;
+        //}
+    }
+
+    public void checkPointRangeChecker()
+    {
+        if(currentCheckpoint < checkpoints.Length - 1)
+        {
             currentCheckpoint++;
         }
-        else if(currentCheckpoint == checkpoints.Length - 1)
+        else if (currentCheckpoint == checkpoints.Length - 1)
         {
             currentCheckpoint = 0;
         }
@@ -69,9 +82,10 @@ public class LapsSystem : MonoBehaviour
         lapTime.enabled = false;
     }
 
-    internal void ConfigureRace(int laps)
+    internal void ConfigureRace(int laps, CheckPoint[] checkpoints)
     {
         this.laps = laps;
+        this.checkpoints = checkpoints;
         currentLap = 0;
         currentCheckpoint = 0;
         timeCounter.ResterCounter();

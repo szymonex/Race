@@ -19,7 +19,7 @@ public class FinishLine : MonoBehaviour
         {
             timeCounter.StopCounter();
             restartPanel.SetActive(true);
-            GameObject.Find("PlayerCar").GetComponent<PlayerCar>().enabled = false;
+            GameObject.Find("PlayerCar").GetComponent<PlayerCar>().enabled = false; //
         }
     }
 
